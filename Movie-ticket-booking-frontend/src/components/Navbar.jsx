@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Search, MapPin, Menu, X, User } from 'lucide-react';
@@ -33,7 +34,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gray-900 border-b border-red-800 sticky top-0 z-50">
+    <nav className="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-2xl font-bold text-accent">
