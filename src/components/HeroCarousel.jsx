@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function HeroCarousel({ movies }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -81,9 +82,9 @@ export default function HeroCarousel({ movies }) {
                     transition={{ delay: 0.5 }}
                     className="flex space-x-4"
                   >
-                    <button className="btn-primary">
+                    <Link to={`/movie/${featuredMovies[currentSlide]?.id}`} className="btn-primary">
                       Book Tickets
-                    </button>
+                    </Link>
                     <button className="btn-secondary flex items-center space-x-2">
                       <Play size={16} />
                       <span>Watch Trailer</span>

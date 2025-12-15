@@ -10,7 +10,7 @@ import { movies } from '../data/movies';
 export default function Home() {
   const [searchParams] = useSearchParams();
   const [loading, setLoading] = useState(true);
-  const [filteredMovies, setFilteredMovies] = useState(movies); 
+  const [filteredMovies, setFilteredMovies] = useState(movies);
   const [filters, setFilters] = useState({
     language: '',
     genre: '',
@@ -18,6 +18,7 @@ export default function Home() {
   });
 
   useEffect(() => {
+    // Simulate loading
     const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
@@ -72,6 +73,7 @@ export default function Home() {
       <HeroCarousel movies={movies} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Filters */}
         <div className="mb-8">
           <div className="flex items-center space-x-4 mb-4">
             <Filter size={20} />
@@ -112,6 +114,7 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Now Showing */}
         {nowShowing.length > 0 && (
           <section className="mb-12">
             <motion.h2
@@ -130,7 +133,7 @@ export default function Home() {
           </section>
         )}
 
-        
+        {/* Upcoming Movies */}
         {upcoming.length > 0 && (
           <section>
             <motion.h2

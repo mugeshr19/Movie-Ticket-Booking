@@ -1,4 +1,3 @@
-// Done by Person-5: Movie data structure and sample data for the application
 export const movies = [
   {
     id: 1,
