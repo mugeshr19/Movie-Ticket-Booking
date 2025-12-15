@@ -3,8 +3,9 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Movie-Ticket-Booking/",
+  base: "./",          // 🔥 THIS is the key fix
   build: {
     outDir: "docs",
+    emptyOutDir: true,
   },
 });
